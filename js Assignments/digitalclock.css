@@ -1,0 +1,35 @@
+body {
+    background-color: rgb(79, 77, 77);
+}
+
+.container {
+    background-color: violet;
+    width: 500px;
+    height: 310px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    padding: 30px;
+    margin: 100px;
+}
+
+.container>div {
+    background-color: white;
+    width: 70px;
+    height: 40px;
+    padding: 10px;
+    float: left;
+    margin: 1px;
+    color: black;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+#colon {
+    background-color: violet;
+    color: white;
+    font-size: 60px;
+    line-height: 30px;
+}

@@ -8,8 +8,13 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
+<<<<<<< HEAD
       "cwd": "c:/Users/Megha sihag/OneDrive/Desktop/C-Assignment",
       "program": "c:/Users/Megha sihag/OneDrive/Desktop/C-Assignment/build/Debug/outDebug",
+=======
+      "cwd": "c:/Users/Megha sihag/git/createproject",
+      "program": "c:/Users/Megha sihag/git/createproject/build/Debug/outDebug",
+>>>>>>> 4eef5d1d832296dc9367a3b9322f19d6385d4eac
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
