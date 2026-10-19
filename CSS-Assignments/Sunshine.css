@@ -1,0 +1,24 @@
+div {
+    width: 740px;
+    height: 707px;
+    border: 5px;
+    border-style: solid;
+    border-color: teal;
+    border-radius: 12px;
+
+    color: #8a2be2;
+    background: linear-gradient(135deg, #ffe4e1, #ffc0cb);
+
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 7%;
+    background-image: url('flower7-removebg-preview.png'), url('flower2-removebg-preview.png'), url('border-image3.png'), url("flower4-removebg-preview.png");
+    background-repeat: no-repeat;
+    background-position: top left, top right, bottom left, bottom right;
+}
+
+p {
+    display: block;
+    margin-top: 200px;
+    text-align: center;
+}

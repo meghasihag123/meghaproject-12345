@@ -1,0 +1,210 @@
+.div1 {
+    border: 6px solid black; 
+    width: 1055px;
+    height: 877px;
+    padding: 10px;
+     background-color: black; 
+}
+
+.div2 {
+    /* border: 2px solid black; */
+    width: 430px;
+    height: 335px;
+    float: left;
+    background-color: green;
+   
+}
+.div3 {
+    border: 3px solid black;
+    width: 199px;
+    height: 330px;
+    float: left;
+}
+.div5 {
+    border: 3px solid black;
+    width: 61px;
+    height: 50px;
+    float: left;
+}
+.div4 {
+    border: 3px solid black;
+    width: 415px;
+    height: 330px;
+    float: left;
+     background-color: red;
+}
+
+
+
+.div6 {
+    border: 3px solid black;
+    width: 428px;
+    height: 200px;
+    float: left;
+
+}
+.div7 {
+    border: 3px solid black;
+    width: 66px;
+    height: 62px;
+    float: left;
+}
+
+.div8 {
+    border: 3px solid black;
+    width: 200px;
+    height: 200px;
+    float: left;
+    background-image:conic-gradient(red 0deg,red 45deg,blue 45deg,blue 135deg,yellow 135deg,yellow 225deg,green 225deg,green 315deg,red 310deg,red 0deg);
+}
+
+.div9 {
+    border: 3px solid black;
+    width: 410px;
+    height: 200px;
+    float: left;
+
+}
+.div10 {
+    border: 3px solid black;
+    width: 63px;
+    height: 62px;
+    float: left;
+}
+
+
+.div11 {
+    border: 3px solid yellow;
+    width: 428px;
+    height: 330px;
+    float: left;
+    background-color: yellow;
+}
+.div12 {
+
+    border: 3px solid black;
+    width: 199px;
+    height: 333px;
+    float: left;
+}
+.div13 {
+    border: 3px solid black;
+    width: 61px;
+    height: 51px;
+    float: left;
+}
+.div14 {
+    border: 3px solid black;
+    width: 411px;
+    height: 331px;
+    float: left;
+    background-color: blue;
+}
+
+
+
+
+
+
+
+.div15 {
+    /* border: 2px solid black; */
+    width: 220px;
+    height: 220px;
+    margin-left: 90px;
+    margin-top: 40px;
+    padding: 3%;
+    background-color: white;
+
+}
+.div16 {
+    /* border: 2px solid black; */
+    width: 50px;
+    height: 50px;
+    margin-left: 30px;
+    margin-top: 30px;
+    padding: 3%;
+    background-color: green;
+    float: left;
+    border-radius: 10px;
+
+}
+.active{
+    background-color: green;
+}
+
+.div17 {
+    /* border: 2px solid black; */
+    width: 220px;
+    height: 220px;
+    margin-left: 90px;
+    margin-top: 40px;
+    padding: 3%;
+    background-color: white;
+
+}
+.div18 {
+    /* border: 2px solid black; */
+    width: 50px;
+    height: 50px;
+    margin-left: 30px;
+    margin-top: 30px;
+    padding: 3%;
+    background-color: red;
+    float: left;
+    border-radius: 10px;
+
+}.active1{
+    background-color: red;
+}
+
+.div19 {
+    /* border: 2px solid black; */
+    width: 220px;
+    height: 220px;
+    margin-left: 90px;
+    margin-top: 40px;
+    padding: 3%;
+    background-color: white;
+
+}
+.div20 {
+    /* border: 2px solid black; */
+    width: 50px;
+    height: 50px;
+    margin-left: 30px;
+    margin-top: 30px;
+    padding: 3%;
+    background-color: yellow;
+    float: left;
+    border-radius: 10px;
+}
+.active2{
+    background-color: yellow;
+}
+
+.div21 {
+    /* border: 2px solid black; */
+    width: 220px;
+    height: 220px;
+    margin-left: 90px;
+    margin-top: 40px;
+    padding: 3%;
+    background-color: white;
+
+}
+.div22 {
+    /* border: 2px solid black; */
+    width: 50px;
+    height: 50px;
+    margin-left: 30px;
+    margin-top: 30px;
+    padding: 3%;
+    background-color: blue;
+    float: left;
+    border-radius: 10px;
+
+}
+.active3{
+    background-color: blue;
+}

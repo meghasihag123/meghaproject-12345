@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image</title>
+    <!-- <link rel="icon" type="image/svg" href="/Emojis/parrot.svg"> -->
+   <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+    <style>
+        /* BASE STYLES (apply everywhere) */
+        div {
+            display: block;
+            width: 60%;
+            margin: 40px auto;
+            /* centers the div horizontally */
+            padding: 16px;
+            border: 3px solid #ff69b4;
+            background: linear-gradient(135deg, #ffb6c1, #ff00ff, #ffffff);
+            /* soft pink -> magenta ->white gradient*/
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(255, 105, 180, 0.6);
+            /* glowing pink shadow */
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        div:hover {
+            transform: scale(1.05) rotate(-1deg);
+            border-color: #fffacd;
+            /* light golden border on hover */
+            box-shadow: 0 12px 28px rgba(255, 20, 147, 0.7);
+            /* deeper magenta glow */
+        }
+
+        img {
+            max-width: 80%;
+            /* keeps images responsive inside containers */
+            height: auto;
+            /* maintains aspect ratio */
+            display: block;
+            /* removes inline spacing below images */
+            margin: 0 auto;
+            /* centers the image inside the div */
+            border-radius: 16px;
+            transition: transform 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.08);
+            /* zoom effect on flowers */
+        }
+
+        /* Mobile S (320px - 374px ) */
+        @media (min-width:320px)and (max-width:374px) {
+            div {
+                width: 90%;
+                padding: 10px;
+            }
+
+            img {
+                padding: 15px;
+            }
+        }
+
+        /* Mobile M (375px - 424px ) */
+        @media (min-width:375px)and(max-width:424px) {
+            div {
+                width: 88%;
+                padding: 12px;
+            }
+
+            img {
+                max-width: 85%;
+            }
+        }
+
+        /* Mobile l (425px - 767px ) */
+        @media (min-width:425px)and(max-width:767px) {
+            div {
+                width: 85%;
+                padding: 14px;
+            }
+
+            img {
+                max-width: 90%;
+            }
+        }
+
+        /* Tablet (768px - 1023px ) */
+        @media (min-width:768px)and(max-width:1023px) {
+            div {
+                width: 70%;
+                padding: 20px;
+
+            }
+
+            img {
+                max-width: 95%;
+            }
+        }
+
+        /* Laptop (1024px - 1439px ) */
+        @media (min-width:1024px)and(max-width:1439px) {
+            div {
+                width: 60%;
+                padding: 24px;
+            }
+
+            img {
+                max-width: 100%;
+            }
+        }
+
+        /* Desktop (1440px - above ) */
+        @media (min-width:1440px) {
+            div {
+                width: 50%;
+                padding: 28px;
+            }
+
+            img {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img src="/Emojis/Image-6.avif" />
+    </div>
+</body>
+
+</html>

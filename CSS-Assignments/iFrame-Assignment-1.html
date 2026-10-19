@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iFrame-Assignment</title>
+</head>
+<style>
+    iframe {
+        width: 80%;
+        height: 400px;
+        display: block;
+        margin: 20px auto;
+        border: 3px solid #ff69b4;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(255, 105, 180, 0.5);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    iframe:hover {
+        transform: scale(1.02);
+        box-shadow: 0 12px 28px rgba(255, 20, 147, 0.7);
+    }
+
+    /* Anchor tags styled like buttons */
+    a {
+        display: inline-block;
+        padding: 12px 20px;
+        margin: 15px;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        font-size: 16px;
+        border-radius: 8px;
+        background: linear-gradient(135deg, #ff69b4, #ff00ff);
+        box-shadow: 0 6px 12px rgba(255, 20, 147, 0.4);
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+
+    a:hover {
+        background: linear-gradient(135deg, #ff00ff, #c71585);
+        transform: scale(1.05);
+        box-shadow: 0 10px 18px rgba(255, 20, 147, 0.6);
+    }
+
+    /* Optional: center the anchor buttons below iframe */
+    body {
+        text-align: center;
+    }
+</style>
+
+<body>
+
+    <iframe src="home.html" name="a" title="iframe eg"></iframe>
+    <a href="video.mp4" target="a">Video</a>
+    <a href="home.html" target="a">BACK</a>
+
+</body>
+
+
+
+
+
+</html>

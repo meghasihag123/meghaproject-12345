@@ -1,0 +1,89 @@
+.header {
+    border: 5px solid black;
+    background-color: black;
+    width: 90%;
+    height: 50px;
+    border-radius: 30px;
+    box-shadow: -5px -5px 3px orange;
+    margin: 50px;
+    font-size: 35px;
+    text-align: center;
+    padding: 10px;
+    line-height: 50px;
+    color: white;
+
+}
+
+.gridcontainer {
+    border-width: 7px 1px 1px 1px;
+    border-style: solid;
+    border-color: black;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 10px;
+    padding: 5px;
+    margin-left: 100px;
+    width: 85%;
+
+}
+
+.gridcontainer>div {
+    padding: 5px;
+}
+
+.img1 {
+    border: 3px solid grey;
+    border-radius: 30px;
+    width: 230px;
+    height: 230px;
+    margin-top: 15px;
+    opacity: 0.9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.img1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+/* Hover effect: only opacity */
+.img1:hover {
+    opacity: 0.5;
+    /* fades container */
+}
+
+.img11 {
+    border: 3px solid grey;
+    border-radius: 30px;
+    width: 230px;
+    height: 230px;
+    margin-top: 15px;
+    opacity: 0.3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.img11 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+/* Hover effect: only opacity */
+.img11:hover {
+    opacity: 0.9;
+    /* fades container */
+}
+
+.img11:hover img {
+    opacity: 0.9;
+    /* fades image */
+}

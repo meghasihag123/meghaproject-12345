@@ -1,0 +1,559 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+}
+
+.container1 {
+    display: flex;
+    overflow: hidden;
+    background-color: black;
+    position: fixed;
+    top: 0px;
+    justify-content: space-around;
+    width: 100%;
+}
+
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    text-decoration: none;
+    padding: 39px;
+    /* color: white; */
+    font-size: 20px;
+    text-align: center;
+    margin-left: 10px;
+
+}
+
+#div1 {
+    line-height: 63px;
+    margin-left: 80px;
+}
+
+.container1 input[type="button"]:hover:not(.active) {
+    background-color: red;
+}
+
+input[type="button"] {
+    width: 70px;
+    height: 30px;
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 17px;
+}
+
+input[type="text"] {
+    background-color: lightslategray;
+    width: 65px;
+    height: 25px;
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+    font-size: 17px;
+    color: white;
+}
+
+.container1 input[type="text"]:hover {
+    background-color: red;
+}
+
+.act {
+    color: yellow;
+}
+
+
+.active {
+    color: yellow;
+    font-size: 45px;
+    margin-left: 150px;
+    line-height: 90px;
+
+}
+
+.active:hover {
+    color: white;
+}
+
+
+.container2 {
+    display: flex;
+    background-color: yellow;
+    height: 200px;
+    margin-top: 0px;
+}
+
+.container2>div {
+    margin-left: 150px;
+    margin-top: 120px;
+
+}
+
+#div2 {
+    margin-left: 700px;
+}
+
+#div3 {
+    margin-left: 0px;
+}
+
+#heading {
+    margin-top: 100px;
+    line-height: 70px;
+}
+
+.container3 {
+    display: flex;
+    justify-content: space-around;
+}
+
+.img1 {
+    background-color: black;
+    border-radius: 100px;
+    width: 100px;
+    height: 100px;
+    margin-left: 60px;
+}
+
+.container4 {
+    background-color: lightslategray;
+    height: 150px;
+}
+
+.num {
+    float: left;
+    background-color: lightslategray;
+    width: 50%;
+    height: 150px;
+    margin-left: 0px;
+    line-height: 150px;
+    text-align: center;
+}
+
+.num1 {
+    float: left;
+    background-color: lightslategray;
+    width: 50%;
+    height: 150px;
+    font-size: 20px;
+    text-align: center;
+}
+
+#tilt {
+    position: absolute;
+    margin-top: 100px;
+    transform: rotate(-10deg);
+}
+
+.container5 {
+    background-color: rgb(48, 48, 48);
+    width: 100%;
+    height: 650px;
+
+}
+
+.div1 {
+    color: white;
+    font-size: 35px;
+    text-align: center;
+    line-height: 150px;
+}
+
+.div2 {
+    color: white;
+    text-align: center;
+    font-size: 20px;
+}
+
+.container6 {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    /* background-color: pink; */
+    gap: 10px;
+    /* column-gap: 50px; */
+    padding: 1px;
+    justify-content: space-around;
+}
+
+.container6>div {
+    padding: 5px;
+    margin: 10px;
+    font-size: 30px;
+    color: white;
+
+}
+
+#spotify {
+    display: inline-flex;
+    line-height: 80px;
+}
+
+#microsoft {
+    display: inline-flex;
+    line-height: 80px;
+}
+
+#instagram {
+    line-height: 80px;
+}
+
+#zendesk {
+    display: inline-flex;
+    line-height: 60px;
+}
+
+#square {
+    display: inline-flex;
+    line-height: 57px;
+}
+
+#atlension {
+    display: inline-flex;
+    line-height: 60px;
+}
+
+.viewmore {
+    border: 1px solid grey;
+    width: 100px;
+    height: 30px;
+    padding: 5px;
+    text-align: center;
+    margin-left: 600px;
+    color: grey;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.active1:hover {
+    background-color: red;
+}
+
+.container7 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+    padding: 5px;
+    width: 100%;
+    height: 300px;
+    background-color: yellow;
+}
+
+.circle {
+    border: 1px solid lightslategray;
+    width: 70px;
+    height: 70px;
+    margin-left: 100px;
+    border-radius: 40px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 65px;
+    color: lightslategray;
+}
+
+.text {
+    font-size: 25px;
+}
+
+.circle:hover {
+    color: pink;
+}
+
+.container8 {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    padding: 5px;
+    width: 100%;
+    height: 600px;
+    background-color: pink;
+}
+
+.container8>div {
+    padding: 22px;
+    margin-left: 50px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: lightslategray;
+    border-radius: 10px;
+    margin-left: 400px;
+}
+
+.dot1 {
+    width: 10px;
+    height: 10px;
+    background-color: rgb(158, 153, 153);
+    border-radius: 10px;
+    margin-left: 30px;
+}
+
+.dot2 {
+    width: 10px;
+    height: 10px;
+    background-color: rgb(215, 212, 212);
+    border-radius: 10px;
+    margin-left: 30px;
+}
+
+.dot3 {
+    width: 10px;
+    height: 10px;
+    background-color: rgb(245, 239, 239);
+    border-radius: 10px;
+    margin-left: 30px;
+}
+
+.container9 {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1px;
+    padding: 30px;
+    background-color: whitesmoke;
+    height: 900px;
+
+}
+
+.container9>div {
+    padding: 5px;
+    margin-left: 200px;
+
+}
+
+textarea {
+    display: inline-flex;
+    width: 380px;
+    height: 40px;
+    resize: none;
+
+}
+
+#textarea1 {
+    margin-left: 27px;
+}
+
+.callus {
+    line-height: 75px;
+}
+
+.sales {
+    line-height: 0px;
+}
+
+.sales:hover u {
+    display: none;
+
+}
+
+.support:hover u {
+    display: none;
+
+}
+
+#textarea2 {
+    margin-left: 26px;
+}
+
+.support {
+    line-height: 0px;
+}
+
+#textarea3 {
+    margin-left: 43px;
+}
+
+#textarea4 {
+    margin-left: 20px;
+    resize: both;
+}
+
+.buttong {
+    background-color: green;
+    width: 130px;
+    height: 40px;
+    text-align: center;
+    color: white;
+    font-size: 21px;
+    border-radius: 5px;
+    line-height: 35px;
+    /* margin-left: 100px; */
+    /* padding: 10px; */
+}
+
+#butg {
+    margin-left: 540px;
+}
+
+.buttong:hover {
+    background-color: blue;
+}
+
+.container10 {
+    background-color: rgb(11, 10, 10);
+    width: 100%;
+    height: 120px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    gap: 1px;
+    justify-content: space-evenly;
+}
+
+.container10>div {
+    /* margin-left: 100px; */
+    color: pink;
+    margin-top: 10px;
+    line-height: 100px;
+}
+
+#micro {
+    display: inline-flex;
+    line-height: 110px;
+}
+
+#amazon {
+
+    display: inline-block;
+    margin-left: 70px;
+}
+
+.container11 {
+    /* background-color: rgb(66, 64, 64); */
+    background-color: black;
+    height: 200px;
+
+}
+
+#tweet {
+    border: 1px solid rgb(66, 64, 64);
+    background-color: skyblue;
+    border-radius: 35px;
+    width: 50px;
+    height: 50px;
+    margin-left: 20px;
+}
+
+.flex-container {
+    display: flex;
+    /* background-color: rgb(red, green, blue); */
+    width: 50%;
+    height: 100px;
+    float: left;
+
+}
+
+.flex-container>div {
+    margin-top: 10px;
+}
+
+.flex-container1 {
+    float: left;
+    width: 50%;
+    height: 100px;
+    /* background-color: black; */
+    color: white;
+
+}
+
+.flex-container1>div:hover u {
+    display: none;
+}
+
+.s4 {
+    width: 80px;
+    height: 50px;
+    background-color: white;
+    border-radius: 6px;
+}
+
+.left3 {
+    background-color: black;
+    width: 50%;
+    height: 430px;
+     float: left; 
+}
+
+.right3 {
+    background-color: black;
+    width: 50%;
+    height: 430px;
+    float: left;
+}
+
+.left31 {
+    background-color: black;
+    width: 700px;
+    height: 300px;
+}
+
+.left31>div {
+    float: left;
+    width: 150px;
+    color: white;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.s5:hover {
+    color: yellow;
+
+}
+
+.right3 {
+    color: white;
+}
+
+.right3>div {
+    margin-left: 10px;
+}
+
+.s6:hover {
+    color: yellow;
+}
+
+.grid-container3 {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-around;
+    gap: 10px;
+    background-color: blueviolet;
+    padding: 10px;
+    /* color: white; */
+
+
+}
+
+.grid-container3>div {
+    margin-left: 100px;
+
+}
+
+.black {
+    /* display: inline-block; */
+    background-color: blueviolet;
+    width: 300px;
+    height: 50px;
+}
+
+.black>div {
+    float: left;
+    /* line-height: 50px; */
+    padding: 3px;
+}
+
+.grid-container3 .black .s7:hover {
+    color: yellow;
+}
+ .container4 .num1:hover{
+    background-color: yellow;
+
+ }

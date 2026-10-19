@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive-Audio</title>
+    <!-- Add Fevicon -->
+    <!-- <link rel="icon" type="image/jpeg" href="/Emojis/Audio-removebg-preview.png"> -->
+
+</head>
+<style>
+    .container {
+        display: block;
+        width: 380px;
+        height: auto;
+        /* let content decide height */
+        padding: 20px;
+        margin: 100px auto;
+        /* center horizontally */
+        background-image: url('/Emojis/Image-5.avif');
+        background-size: cover;
+        /* scale background properly */
+        background-position: center;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    /* Style audio player */
+    audio {
+        width: 100%;
+        margin-bottom: 15px;
+        border-radius: 6px;
+    }
+
+    /* Style buttons */
+    button {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 8px 14px;
+        margin: 4px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #45a049;
+    }
+
+    /* Different colors for each button */
+    button:nth-of-type(1) {
+        background-color: #2196F3;
+    }
+
+    /* Play */
+    button:nth-of-type(2) {
+        background-color: #f44336;
+    }
+
+    /* Pause */
+    button:nth-of-type(3) {
+        background-color: #FF9800;
+    }
+
+    /* Volume + */
+    button:nth-of-type(4) {
+        background-color: #9C27B0;
+    }
+
+    /* Volume - */
+    @media (max-width: 480px) {
+
+        /* Small phones */
+        .container {
+            padding: 10px;
+            max-width: 95%;
+        }
+
+        button {
+            font-size: 12px;
+            padding: 6px 10px;
+        }
+    }
+
+    /* RESPONSIVE */
+    @media (min-width: 320px) and (max-width: 374px) {
+        .container {
+            width: 70%;
+            /* narrower container for tiny screens */
+            padding: 20px;
+            /* keep spacing comfortable */
+        }
+
+        button {
+            font-size: 15px;
+            /* readable text size */
+            padding: 10px;
+            /* must include unit like px */
+        }
+    }
+
+    @media (min-width: 375px) and (max-width: 480px) {
+        .container {
+            width: 80%;
+            /* slightly wider than tiny phones */
+            padding: 15px;
+            /* balanced spacing */
+        }
+
+        button {
+            font-size: 14px;
+            /* readable but not too large */
+            padding: 8px 12px;
+            /* comfortable touch size */
+        }
+
+        audio {
+            width: 100%;
+            /* full width inside container */
+        }
+    }
+
+
+    @media (min-width: 481px) and (max-width: 768px) {
+
+        /* Tablets */
+        .container {
+            max-width: 500px;
+        }
+
+        button {
+            font-size: 13px;
+            padding: 7px 12px;
+        }
+    }
+
+    @media (min-width: 769px) {
+
+        /* Laptops & desktops */
+        .container {
+            max-width: 600px;
+        }
+
+        button {
+            font-size: 15px;
+            padding: 10px 16px;
+        }
+    }
+</style>
+
+<body>
+
+    <!-- 1... -->
+    <!-- <audio controls>
+            <source src="/Emojis/Audio-1.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio> -->
+    <!-- 2... -->
+    <div class="container">
+        <div>
+            <audio id="myAudio" controls>
+                <source src="/Emojis/Audio-1.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+
+        <div>
+            <button onclick="document.getElementById('myAudio').play()">Play</button>
+            <button onclick="document.getElementById('myAudio').pause()">Pause</button>
+            <button onclick="document.getElementById('myAudio').volume +=0.1">Volume +</button>
+            <button onclick="document.getElementById('myAudio').volume -=0.1">Volume -</button>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

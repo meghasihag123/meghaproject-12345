@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frameset-2</title>
+</head>
+<!-- 1. Basic Frameset with Target -->
+<!-- <frameset cols="50%,50%">
+    <frame src="menu.html" name="leftFrame">
+        <frame src="content.html" name="rightFrame">
+</frameset> -->
+
+<!-- Links in menu.html -->
+<!-- <a href="about.html" target="rightFrame">About</a>
+<a href="contact.html" target="rightFrame">Contact</a> -->
+
+<!-- 2. Using _self, _blank, _parent, _top -->
+<!-- <frameset cols="30%,70%">
+    <frame src="menu.html" name="menuFrame">
+        <frame src="home.html" name="mainFrame">
+</frameset> -->
+
+<!-- Inside menu.html -->
+<!-- <a href="page.html" target="_self">Same Frame</a>
+<a href="page.html" target="_blank">New Tab</a>
+<a href="page.html" target="_parent">Parent Frame</a>
+<a href="page.html" target="_top">Full Window</a> -->
+
+<!-- 3. Nested Framesets with Target -->
+<!-- <frameset rows="30%,70%"> -->
+<!-- Top frame -->
+<!-- <frame src="header.html" name="headerFrame"> -->
+
+<!-- Bottom part split into two columns -->
+<!-- <frameset cols="50%,50%">
+            <frame src="aboutus.html" name="leftFrame">
+                <frame src="contact.html" name="rightFrame">
+        </frameset> -->
+<!-- </frameset> -->
+
+<!-- 4. Advanced Example: Multiple Targets -->
+<frameset cols="25%,75%">
+    <frame src="nav.html" name="navFrame">
+
+        <frameset rows="50%,50%">
+            <frame src="gallery.html" name="topframe">
+                <frame src="contact.html" name="bottomframe">
+                    <frame>
+        </frameset>
+
+</frameset>
+
+</html>

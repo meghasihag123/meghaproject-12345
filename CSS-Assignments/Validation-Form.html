@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation-Form</title>
+
+    <link rel="stylesheet" href="Validation-Form.css">
+</head>
+
+<body>
+    <div class="form-wrapper">
+        <h2>Registration Form</h2>
+        <form>
+            <!-- Name field -->
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <!-- Email field -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <!-- Password field -->
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required minlength="6">
+
+            <!-- Phone number field -->
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="10 digits" required>
+
+            <!-- Age field -->
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" min="18" max="100" required>
+            <!-- Upload-Photo -->
+            <label for="photo">Upload Photo:</label>
+            <input type="file" id="photo" name="photo" accept="image/*">
+
+            <!-- Submit button -->
+            <button type="submit">Submit</button>
+        </form>
+
+    </div>
+
+    <!-- <script src="Validation-Form.js"></script> -->
+    <!-- 
+for + id → Accessibility and usability 
+(labels properly linked to inputs).
+name → Ensures data is actually sent to the backend.
+type="tel" → Improves user experience, especially 
+on mobile, and allows validation.
+ -->
+</body>
+
+</html>

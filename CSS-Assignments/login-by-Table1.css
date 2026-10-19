@@ -1,0 +1,45 @@
+body{
+    background-image: url(back.png);
+}
+table{
+    width: 30%;
+    padding: 50%;
+     opacity: 0.67; 
+    border-radius: 5px;
+    background-color: black;
+    margin-left: 400px;
+}
+table,td{
+     text-align: center; 
+    margin-top: 100px;
+    padding: 10px;
+}
+
+input[type="text"]{
+    background-color: white;
+    width: 90%;
+    padding: 10px;
+    font-size: 20px;
+}
+input[type="password"]{
+    background-color: white;
+    width: 90%;
+    padding: 10px;
+    font-size: 20px;
+}
+.textalign{
+    text-align: start;
+}
+.login{
+    background-color: orange;
+    width: 95%;
+    height: 37px;
+    margin-left: 10px;
+    font-size: 23px;
+    color: white;
+    line-height: 31px;
+    
+}
+.login:hover{
+    background-color: lightblue;
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iFrame-Assignment2</title>
+    <style>
+        /* General page styling */
+        body {
+            font-family: Arial, sans-serif;
+            background: #fdf2f8;
+            /* soft pink background */
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Iframe styling */
+        iframe {
+            width: 90%;
+            height: 500px;
+            margin: 20px auto;
+            display: block;
+            border: 3px solid #ff69b4;
+            /* hot pink border */
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(255, 105, 180, 0.5);
+            /* glowing shadow */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        iframe:hover {
+            transform: scale(1.02);
+            box-shadow: 0 12px 28px rgba(255, 20, 147, 0.7);
+        }
+
+        /* Anchor links styled as buttons */
+        a {
+            display: inline-block;
+            padding: 10px 18px;
+            margin: 10px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #ff69b4, #ff00ff);
+            /* pink → magenta */
+            box-shadow: 0 6px 12px rgba(255, 20, 147, 0.4);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        a:hover {
+            background: linear-gradient(135deg, #ff00ff, #c71585);
+            /* darker magenta */
+            transform: scale(1.05);
+            box-shadow: 0 10px 18px rgba(255, 20, 147, 0.6);
+        }
+
+        /* Optional: spacing between sections */
+        iframe+a {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <iframe src="home.html" name="HOME" height="800px" width="100%" title="iframe example"></iframe>
+    <a href="home.html" target="HOME">HOME</a>
+    <a href="Infomax2.html" target="HOME">ABOUTUS</a>
+    <a href="courses.html" target="HOME">COURSES</a>
+
+    <iframe src="Infomax2.html" name="ABOUTUS" height="800px" width="100%" title="iframe example"></iframe>
+    <a href="home.html" target="ABOUTUS">HOME</a>
+    <a href="Infomax2.html" target="ABOUTUS">ABOUTUS</a>
+    <a href="courses.html" target="ABOUTUS">COURSES</a>
+
+    <iframe src="courses.html" name="COURSES" height="770px" width="100%" title="iframe example"></iframe>
+    <a href="home.html" target="COURSES">HOME</a>
+    <a href="Infomax2.html" target="COURSES">ABOUTUS</a>
+    <a href="courses.html" target="COURSES">COURSES</a>
+
+</body>
+
+</html>

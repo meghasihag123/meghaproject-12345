@@ -1,0 +1,328 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /*Viewport Height
+     body is as tall as the screen
+     1vh = 1% of the height of the browser window (viewport).
+     So, 100vh = 100% of the viewport height → 
+     the element stretches to fill the entire screen vertically.
+    */
+    background-color: #0f172a;
+    overflow: hidden;
+}
+
+/* container-box */
+.login-box {
+    position: relative;
+    width: 400px;
+    /* fixed width */
+    padding: 15px;
+    /* space inside the box */
+    background-color: rgba(30, 41, 59, 0.7);
+    /* semi-transparent background */
+    border-radius: 10px;
+    /* rounded corners */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    /* softer shadow */
+    margin: 50px auto;
+    /* center horizontally with margin
+    Top & bottom = 50px
+    Left & right = auto 
+    (browser decides, often used to center horizontally).
+    */
+}
+
+/* Heading styling */
+.login-box h2 {
+    color: #fff;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 1.8rem;
+    /* 
+    Full form: rem = Root EM.
+    It’s a relative unit based on the root element’s font size (usually <html>).
+    By default, most browsers set the root font size to 16px.
+    So:
+    1rem = 16px
+    1.8rem = 1.8 × 16px = 28.8px
+    */
+    letter-spacing: 1px;
+}
+
+/* Floating Label Input Group */
+.input-group {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 1rem;
+    color: #fff;
+    border: none;
+    border-bottom: 2px solid #64748b;
+    outline: none;
+    background: transparent;
+    transition: border-color 0.3s ease;
+}
+
+.input-group label {
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    font-size: 1rem;
+    color: #94a3b8;
+    pointer-events: none;
+    /* 
+    What it does:
+     Disables mouse interactions for the element.
+     auto → default, element responds to clicks, hovers, etc.
+     none → element ignores all pointer (mouse/touch) events.
+     */
+    transition: transform 0.3s ease, color 0.3s ease, font-size 0.3s ease;
+    /*NOTE: IMPORTANT*/
+}
+
+/* Floating Label Animation Triggers */
+/* When input is focused */
+.input-group input:focus~label {
+    transform: translateY(-24px);
+    /* move label up when input is focused*/
+}
+
+/* When input is valid */
+.input-group input:valid~label {
+    font-size: 0.85rem;
+    /* shrink label text */
+    color: #38bdf8;
+    /* change label color */
+}
+
+.input-group input:focus {
+    border-bottom-color: #38bdf8;
+}
+
+.form-links {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.form-links a {
+    color: 94a3b8;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: color 0.3s;
+}
+
+.form-links a:hover {
+    color: #38bdf8;
+}
+
+/* Button & Hover Micro-interactions */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background: #38bdf8;
+    border: none;
+    outline: none;
+    color: #0f172a;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.1s, box-shadow 0.3s;
+}
+
+.submit-btn:hover {
+    background: #0ea5e9;
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+}
+
+.submit-btn:active {
+    transform: scale(0.98);
+}
+
+/* Corner Border Line Animations */
+/* nth-child() is a CSS pseudo-class.
+It lets you select an element based on its position (order)
+inside its parent.
+The number inside nth-child() tells CSS 
+which child you want.
+
+What is <span>?
+Inline element
+*By default, <span> is inline (like <b>, <i>).
+*It doesn’t start on a new line, unlike <div> which is block-level.
+Often used with CSS
+*You can apply classes, IDs, or inline styles to <span> to change how part of the text looks.
+*/
+.login-box span {
+    position: absolute;
+    display: block;
+}
+
+/* Top line tracing right */
+.login-box span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #38bdf8);
+    animation: animateTop 2s linear infinite;
+    animation-delay: 0s;
+}
+
+@keyframes animateTop {
+    0% {
+        left: -100%;
+    }
+
+    50% {
+        left: 100%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+/* Right line tracing down */
+.login-box span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #38bdf8);
+    animation: animateRight 2s linear infinite;
+    animation-delay: 0.5s;
+}
+
+@keyframes animateRight {
+    0% {
+        top: -100%
+    }
+
+    50% {
+        top: 100%;
+    }
+
+    100% {
+        top: 100%
+    }
+}
+
+/* Bottom line tracing left */
+.login-box span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #38bdf8);
+    animation: animateBottom 2s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes animateBottom {
+    0% {
+        right: -100%;
+    }
+
+    50%,
+    100% {
+        right: 100%;
+    }
+}
+
+/* Left line tracing up */
+.login-box span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #38bdf8);
+    animation: animateLeft 2s linear infinite;
+    animation-delay: 1.5s;
+}
+
+@keyframes animateLeft {
+    0% {
+        bottom: -100%;
+    }
+
+    50%,
+    100% {
+        bottom: 100%;
+    }
+}
+
+
+               /* RESPONSIVE-WORK */
+/* Mobile Small (320px and up) */
+@media (min-width: 320px) and (max-width: 374px) {
+  .login-box {
+    width: 90%;
+    padding: 10px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Mobile Medium (375px and up) */
+@media (min-width: 375px) and (max-width: 424px) {
+  .login-box {
+    width: 85%;
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile Large (425px and up) */
+@media (min-width: 425px) and (max-width: 767px) {
+  .login-box {
+    width: 80%;
+    padding: 15px;
+    font-size: 1rem;
+  }
+}
+
+/* Tablets (768px and up) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .login-box {
+    width: 70%;
+    max-width: 600px;
+    padding: 20px;
+    font-size: 1.05rem;
+  }
+}
+
+/* Laptops (1024px and up) */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .login-box {
+    width: 60%;
+    max-width: 700px;
+    padding: 25px;
+    font-size: 1.1rem;
+    /* margin-left:100px auto; */
+  }
+}
+
+/* Desktops (1440px and up) */
+@media (min-width: 1440px) {
+  .login-box {
+    width: 50%;
+    max-width: 800px;
+    padding: 30px;
+    font-size: 1.2rem;
+  }
+}
