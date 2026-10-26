@@ -1,0 +1,42 @@
+input[type="button"] {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    margin: 5px;
+}
+
+#board {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#winner {
+    font-size: 24px;
+    margin-top: 20px;
+    color: green;
+}
+
+#resetBtn {
+    margin-top: 20px;
+    font-size: 18px;
+    padding: 10px 20px;
+}
+
+/* 📱 Small screens */
+@media (max-width: 480px) {
+    input[type="button"] {
+        width: 22vw;       /* scale with screen width */
+        height: 22vw;      /* keep square shape */
+        font-size: 6vw;    /* scale text size */
+        margin: 3px;
+    }
+
+    #winner {
+        font-size: 5vw;    /* scale winner text */
+    }
+
+    #resetBtn {
+        font-size: 4vw;
+        padding: 8px 16px;
+    }
+}

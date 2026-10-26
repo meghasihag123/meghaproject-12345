@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.slide-container {
+    position: relative;
+    /* important for absolute positioning inside */
+    width: 100%;
+    max-width: 1000px;   /* cap width for large screens */
+    margin: auto;
+    overflow: hidden;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.arrow {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    /* vertically centered */
+     transform: translateY(-50%);
+    color: black;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 8px 15px;
+    border-radius: 50%;
+    font-size: 25px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+.arrow:hover {
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+}
+ .next{
+    right: 10px;
+   
+}
+.prev{
+    left: 10px;
+}
+.caption{
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 12px 0;
+}
+.slide{
+    display: none;
+}
+/* 📱 Mobile screens */
+@media (max-width: 480px) {
+    .arrow {
+        font-size: 18px;
+        padding: 6px 12px;
+    }
+    .caption {
+        font-size: 16px;
+        padding: 8px 0;
+    }
+}
+/* 📲 Tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+    .arrow {
+        font-size: 22px;
+        padding: 7px 14px;
+    }
+    .caption {
+        font-size: 20px;
+    }
+}
+/* 💻 Laptops */
+@media (min-width: 769px) and (max-width: 1200px) {
+    .arrow {
+        font-size: 25px;
+        padding: 8px 15px;
+    }
+    .caption {
+        font-size: 22px;
+    }
+}
+/* 🖥️ Large desktops */
+@media (min-width: 1201px) {
+    .slide-container {
+        max-width: 1200px;
+    }
+    .caption {
+        font-size: 26px;
+    }
+}

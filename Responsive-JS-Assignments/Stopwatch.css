@@ -1,0 +1,141 @@
+body {
+    background-color: lightpink;
+    margin: 0;
+    padding: 0;
+    display: flex;              
+    justify-content: center;    
+    align-items: center;        
+    min-height: 100vh;          
+    flex-direction: column;     /* stack title, subtitle, stopwatch */
+}
+
+/* Title */
+.title {
+    font-weight: bold;
+    margin: 20px;
+    text-align: center;
+}
+
+/* Subtitle */
+.subtitle {
+    font-size: 22px;
+    background: rgb(45, 72, 222);
+    width: 204px;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+/* Main container */
+.container {
+    background-color: black;
+    width: 90%;                 
+    max-width: 400px;           
+    border-radius: 15px;
+    padding: 20px;              
+    box-sizing: border-box;
+    text-align: center;         
+}
+
+/* Stopwatch display */
+.container2 {
+    background-color: rgb(50, 101, 232);
+    width: 100%;                
+    border-radius: 10px;
+    color: white;
+    display: flex;              
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; 
+    padding: 10px;
+    margin-bottom: 20px;        
+}
+
+.container2 > div {
+    text-align: center;
+    padding: 8px;
+    font-size: clamp(1.2rem, 2vw, 1.8rem); 
+    font-weight: bold;
+}
+
+/* Buttons */
+input[type="button"] {
+    margin: 8px;
+    padding: 10px;
+    width: clamp(80px, 30%, 120px); 
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+input[type="button"]:hover {
+    background-color: rgb(50, 101, 232);
+    color: white;
+    box-shadow: 0 0 10px rgba(50, 101, 232, 0.7);
+}
+
+
+/* 📱 Small phones */
+@media (max-width: 480px) {
+    .container {
+        max-width: 95%;
+    }
+    .container2 > div {
+        font-size: 1.2rem;
+    }
+    input[type="button"] {
+        width: 80%;             
+        margin: 5px auto;
+        display: block;         /* stack vertically */
+    }
+}
+
+/* 📲 Tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+    .container {
+        max-width: 500px;
+    }
+    .container2 > div {
+        font-size: 1.4rem;
+    }
+    input[type="button"] {
+        width: 40%;
+    }
+}
+
+/* 💻 Laptops */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        max-width: 600px;
+    }
+    .container2 > div {
+        font-size: 1.6rem;
+    }
+    input[type="button"] {
+        width: 35%;
+    }
+}
+
+/* 🖥️ Large desktops */
+@media (min-width: 1201px) {
+    .container {
+        max-width: 400px;
+    }
+    .container2 > div {
+        font-size: 1.8rem;
+    }
+    input[type="button"] {
+        width: 25%;
+    }
+}
+
+
+
+
+
+
+
+

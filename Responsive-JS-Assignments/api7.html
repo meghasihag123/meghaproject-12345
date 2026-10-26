@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page api6.1</title>
+    <script defer src="api6.js"></script>
+</head>
+<style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+a {
+  display: inline-block;
+  margin: 10px 0;
+  font-size: 1rem;
+  color: blue;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#demo {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 425px) {
+  h1 { font-size: 1.5rem; }
+  a { font-size: 0.9rem; }
+  #demo { font-size: 1.2rem; }
+}
+
+@media (max-width: 768px) {
+  h1 { font-size: 1.8rem; }
+  a { font-size: 1rem; }
+  #demo { font-size: 1.3rem; }
+}
+
+@media (min-width: 1024px) {
+  h1 { font-size: 2.2rem; }
+  a { font-size: 1.1rem; }
+  #demo { font-size: 1.6rem; }
+}
+
+</style>
+
+<body>
+    <h1>This is page api7</h1>
+    <a href="api6.html">Go to page api6</a>
+    <p id="demo"></p> <!-- ✅ Needed for the clock -->
+</body>
+
+</html>

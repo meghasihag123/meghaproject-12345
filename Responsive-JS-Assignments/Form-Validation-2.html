@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        body {
+            background-color: #3498db;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        #form-container {
+            background-color: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 6px;
+            width: 90%;
+            max-width: 300px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            margin: 0px 0px 15px 0px;
+        }
+
+        input {
+            width: 100%;
+            margin: 10px 0px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #217dbb;
+        }
+
+        .error {
+            color: red;
+            margin: 0px;
+            text-align: left;
+            font-size: 0.9rem;
+        }
+
+        /* 📱 Small phones */
+        @media (max-width: 480px) {
+            #form-container {
+                max-width: 95%;
+                padding: 20px;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+            }
+
+            input {
+                font-size: 0.9rem;
+                padding: 8px;
+            }
+        }
+
+        /* 📲 Tablets */
+        @media (min-width: 481px) and (max-width: 768px) {
+            #form-container {
+                max-width: 400px;
+                padding: 25px;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+            }
+
+            input {
+                font-size: 1rem;
+            }
+        }
+
+        /* 💻 Laptops */
+        @media (min-width: 769px) and (max-width: 1200px) {
+            #form-container {
+                max-width: 500px;
+                padding: 30px;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            input {
+                font-size: 1rem;
+            }
+        }
+
+        /* 🖥️ Large desktops */
+        @media (min-width: 1201px) {
+            #form-container {
+                max-width: 600px;
+                padding: 40px;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            input {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="form-container">
+        <h2>Login</h2>
+        <form action="" onsubmit="return validateForm()">
+            <input type="text" placeholder="User Name" name="name" id="username"><br>
+            <p id="userError" class="error"></p>
+            <input type="password" placeholder="Password" name="password" id="password"><br>
+            <p id="passError" class="error"></p>
+            <input type="submit">
+        </form>
+    </div>
+
+    <script>
+        let username = document.getElementById('username');
+        let password = document.getElementById('password');
+        let flag = 1;
+
+        function validateForm() {
+            if (username.value == "") {
+                // console.log('username empty');
+                document.getElementById('userError').innerHTML = "User Name is Empty";
+
+                flag = 0;
+            }
+            else if (username.value.length < 3) {
+                document.getElementById('userError').innerHTML = "User Name require min 3 character";
+
+                flag = 0;
+            }
+            else {
+                document.getElementById('userError').innerHTML = "";
+
+                flag = 1;
+            }
+
+            if (password.value == "") {
+                document.getElementById('passError').innerHTML = "Password is empty";
+
+                flag = 0;
+            }
+            else {
+                document.getElementById('passError').innerHTML = "";
+
+                flag = 1;
+            }
+
+
+            // return false;
+            if (flag) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>

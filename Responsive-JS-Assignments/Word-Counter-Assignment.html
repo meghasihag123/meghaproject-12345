@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Counter</title>
+    <style>
+       body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    padding: 0px 100px;
+    background: #f9f9f9;
+}
+
+/* Title */
+h1 {
+    background-color: blue;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin: 0px;
+    font-size: 1.8rem;
+}
+
+/* Text area */
+#textbox {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid blue;
+    font-size: 1.2rem;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+
+/* Counter box */
+p {
+    text-align: center;
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin: 0px;
+    border-radius: 4px;
+}
+
+/* 📱 Small phones */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;   /* reduce side padding */
+    }
+    h1 {
+        font-size: 1.4rem;
+        padding: 8px;
+    }
+    #textbox {
+        font-size: 1rem;
+        height: 100px;
+    }
+    p {
+        font-size: 1.1rem;
+        padding: 8px;
+    }
+}
+
+/* 📲 Tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+    h1 {
+        font-size: 1.6rem;
+    }
+    #textbox {
+        font-size: 1.1rem;
+    }
+    p {
+        font-size: 1.2rem;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+    <h1>Word and Character Counter</h1>
+    <textarea id="textbox" rows="10"></textarea>
+    <p>
+        <span id="word">0</span> Words<br>
+        <span id="char">0</span> Characters<br>
+    </p>
+    
+    <script>
+        let textbox = document.getElementById("textbox");
+        textbox.addEventListener('input', function () {
+            var text = this.value;
+            // console.log(text);
+            let char = text.length;  // to count character length
+            document.getElementById("char").innerHTML = char;
+
+            // trim() to remove before and after spaces only not spaces in b/w two worlds
+            text = text.trim();
+            // To count words
+            let words = text.split(" ");
+            // To remove space b/w words also (use filter())
+            let cleanList = words.filter(function (elm) {
+                return elm != "";
+            });
+
+            // var word = words.length;
+            var word = cleanList.length;
+            // console.log(words);
+            console.log(cleanList);
+            // document.getElementById("word").innerHTML = word;
+            document.getElementById("word").innerHTML = word;
+
+        });
+    </script>
+
+
+</body>
+
+</html>

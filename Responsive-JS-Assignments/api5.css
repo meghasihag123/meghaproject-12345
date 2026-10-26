@@ -1,0 +1,36 @@
+table {
+    border: 1px solid;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+td {
+    border: 1px solid;
+    padding: 5px;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+/* Responsive breakpoints */
+@media(max-width:375px){
+    table{font-size: 12px;}
+    td{padding: 3px;}
+    img{width: 40px;height: 40px;}
+}
+@media (max-width: 425px) {
+  table { font-size: 13px; }
+  td { padding: 4px; }
+  img { width: 50px; height: 50px; }
+}
+@media (max-width:768px){
+table{font-size: 15px;}
+td{padding: 6px;}
+img{width: 60px;height: 60px;}
+}
+@media (min-width: 1024px) {
+  table { font-size: 16px; }
+  td { padding: 8px; }
+  img { width: 70px; height: 70px; }
+}

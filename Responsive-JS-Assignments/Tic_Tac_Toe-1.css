@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: #f4f6f8;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Game buttons */
+input[type="button"] {
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    border-radius: 10px;
+    border: none;
+    background-color: #ffffff;
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+/* Hover effect */
+input[type="button"]:hover {
+    background-color: #e3f2fd;
+}
+
+/* Disabled buttons */
+input[type="button"]:disabled {
+    background-color: #dcdcdc;
+    color: #777;
+    cursor: not-allowed;
+}
+
+/* Result box */
+#r {
+    margin-top: 20px;
+    background-color: #ffffff;
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    line-height: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 📱 Small screens */
+@media (max-width: 480px) {
+    /* Make board buttons scale */
+    input[type="button"] {
+        width: 22vw;       /* relative to screen width */
+        height: 22vw;      /* keep square shape */
+        font-size: 6vw;    /* scale text */
+        margin: 3px;
+    }
+
+    #r {
+        width: 90%;        /* stretch result box */
+        font-size: 5vw;    /* scale text */
+    }
+}

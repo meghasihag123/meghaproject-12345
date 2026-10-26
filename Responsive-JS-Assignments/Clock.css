@@ -1,0 +1,248 @@
+/*
+angle = (number % 12) × 30°
+Why?
+Full circle = 360°
+12 numbers → 360 / 12 = 30° each
+
+| Number | n value | Angle |
+| ------ | ------- | ----- |
+| 12     | 0       | 0°    |
+| 1      | 1       | 30°   |
+| 2      | 2       | 60°   |
+| 3      | 3       | 90°   |
+| 6      | 6       | 180°  |
+| 9      | 9       | 270°  |
+| 11     | 11      | 330°  |
+*/
+
+body {
+    /* background-color: rgb(55, 115, 195); */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    /* background-image: url("paper.gif"); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f0f0f0;
+}
+
+/* Clock container */
+.container {
+    background-color: white;
+    width: 220px;
+    height: 220px;
+    border: 4px solid darkcyan;
+    border-radius: 50%;
+    /* margin: 100px auto; */
+    position: relative;
+}
+
+/* Center dot */
+#center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* THIS FIXES CENTERING */
+    background-color: black;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    /* position: relative; */
+}
+
+/* Numbers */
+.n1,
+.n2,
+.n3,
+.n4,
+.n5,
+.n6,
+.n7,
+.n8,
+.n9,
+.n10,
+.n11,
+.n12 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* 1 */
+.n1 {
+    transform: translate(-50%, -50%) rotate(30deg) translate(0, -80px) rotate(-30deg);
+}
+
+/* 2 */
+.n2 {
+    transform: translate(-50%, -50%) rotate(60deg) translate(0, -80px) rotate(-60deg);
+}
+
+/* 3 */
+.n3 {
+    transform: translate(-50%, -50%) rotate(90deg) translate(0, -80px) rotate(-90deg);
+}
+
+/* 4 */
+.n4 {
+    transform: translate(-50%, -50%) rotate(120deg) translate(0, -80px) rotate(-120deg);
+}
+
+/* 5 */
+.n5 {
+    transform: translate(-50%, -50%) rotate(150deg) translate(0, -80px) rotate(-150deg);
+}
+
+/* 6 */
+.n6 {
+    transform: translate(-50%, -50%) rotate(180deg) translate(0, -80px) rotate(-180deg);
+}
+
+/* 7 */
+.n7 {
+    transform: translate(-50%, -50%) rotate(210deg) translate(0, -80px) rotate(-210deg);
+}
+
+/* 8 */
+.n8 {
+    transform: translate(-50%, -50%) rotate(240deg) translate(0, -80px) rotate(-240deg);
+}
+
+/* 9 */
+.n9 {
+    transform: translate(-50%, -50%) rotate(270deg) translate(0, -80px) rotate(-270deg);
+}
+
+/* 10 */
+.n10 {
+    transform: translate(-50%, -50%) rotate(300deg) translate(0, -80px) rotate(-300deg);
+}
+
+/* 11 */
+.n11 {
+    transform: translate(-50%, -50%) rotate(330deg) translate(0, -80px) rotate(-330deg);
+}
+
+/* 12 (top) */
+.n12 {
+    transform: translate(-50%, -50%) rotate(0deg) translate(0, -80px) rotate(0deg);
+}
+
+/* Adjust Hands at 12 o'clock */
+/* #sec,
+#min,
+#hr {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+} */
+
+/* #sec,
+#min,
+#hr {
+    transform-origin: left;
+} */
+
+/* change UI so not need to adjust hand at 12 o'clock*/
+#sec,
+#min,
+#hr {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: left;
+    transform: rotate(-90deg);
+}
+
+/* Second hand */
+#sec {
+    width: 70px;
+    height: 2px;
+    background-color: red;
+    margin-top: -1px;
+    margin-left: 0px;
+}
+
+/* Minute hand */
+#min {
+width: 55px;
+    height: 4px;
+    background-color: gray;
+    margin-top: -2px;
+    margin-left: 0px;
+}
+
+/* Hour hand */
+#hr {
+width: 40px;
+    height: 4px;
+    background-color: black;
+    margin-top: -2px;
+    margin-left: 0px;
+}
+
+
+/* 📱 Small phones */
+@media (max-width: 480px) {
+    .container {
+        width: 180px;
+        height: 180px;
+    }
+    .n1, .n2, .n3, .n4, .n5, .n6,
+    .n7, .n8, .n9, .n10, .n11, .n12 {
+        font-size: 16px;
+    }
+    #sec { width: 55px; }
+    #min { width: 45px; }
+    #hr  { width: 32px; }
+}
+
+/* 📲 Tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+    .container {
+        width: 200px;
+        height: 200px;
+    }
+    .n1, .n2, .n3, .n4, .n5, .n6,
+    .n7, .n8, .n9, .n10, .n11, .n12 {
+        font-size: 18px;
+    }
+    #sec { width: 65px; }
+    #min { width: 50px; }
+    #hr  { width: 36px; }
+}
+
+/* 💻 Laptops */
+@media (min-width: 769px) and (max-width: 1200px) {
+    .container {
+        width: 240px;
+        height: 240px;
+    }
+    .n1, .n2, .n3, .n4, .n5, .n6,
+    .n7, .n8, .n9, .n10, .n11, .n12 {
+        font-size: 20px;
+    }
+    #sec { width: 75px; }
+    #min { width: 60px; }
+    #hr  { width: 42px; }
+}
+
+/* 🖥️ Large desktops */
+@media (min-width: 1201px) {
+    .container {
+        width: 300px;
+        height: 300px;
+    }
+    .n1, .n2, .n3, .n4, .n5, .n6,
+    .n7, .n8, .n9, .n10, .n11, .n12 {
+        font-size: 22px;
+    }
+    #sec { width: 90px; }
+    #min { width: 70px; }
+    #hr  { width: 50px; }
+}

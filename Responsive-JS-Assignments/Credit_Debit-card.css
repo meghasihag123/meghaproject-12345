@@ -1,0 +1,159 @@
+.container {
+    background: linear-gradient(135deg, #000, #333);
+    width: 90%; /* flexible width */
+    max-width: 460px;  /* cap size on large screens */
+    height: auto;
+    margin: 150px auto;
+    border-radius: 24px;
+    aspect-ratio: 460/280;/* keeps card proportion */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    position: relative;
+    /* important for chip positioning */
+}
+/* Logo section */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+}
+
+span.d1 {
+    /* display: inline-block; */
+    width: 40px;
+    height: 40px;
+    background-color: rgb(222, 58, 58);
+    border-radius: 50%;
+    position: relative;
+    opacity: 0.8;
+    z-index: 2;
+    /* red circle on top */
+}
+
+span.d2 {
+    position: absolute;
+    left: 25px;
+    /* overlap d1 slightly */
+    /* display: inline-block; */
+    width: 40px;
+    height: 40px;
+    background-color: rgb(244, 244, 74);
+    border-radius: 50%;
+    opacity: 0.8;
+    z-index: 1;
+    /* yellow circle behind */
+}
+
+span.d3 {
+    /* display: inline-block; */
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin-left: 40px;
+}
+/* Chip image */
+.chip {
+    position: absolute;
+    top: 8px;
+    right: 20px;
+    width: 70px;
+    height: auto;
+}
+/* Card text */
+#p1 {
+    color: #ccc;
+    margin-top: 60px;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+#p2 {
+    color: white;
+    font-size: 30px;
+    letter-spacing: 3px;
+    word-spacing: 4px;
+}
+
+#last {
+    display: flex;
+    justify-content: space-between; /* name on left, security on right */
+    align-items: flex-end;
+}
+
+#last #p3 {
+    font-size: 22px;
+    position: relative;
+    padding: 6px;
+    color: white;
+}
+.security {
+    display: flex;
+    flex-direction: column; /* stack expiry and CVV vertically */
+    align-items: flex-end;  /* push them to the right edge */
+    color: white;
+}
+
+#p4 {
+    margin: 0;
+    font-size: 18px;
+}
+
+#p4 span {
+    font-size: 20px;
+    margin-left: 6px;
+}
+
+#cvv {
+    margin-top: 4px;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+/* 📱 Small phones */
+@media (max-width: 480px) {
+    .container {
+        max-width: 300px;
+        padding: 15px;
+    }
+    span.d1, span.d2 {
+        width: 30px;
+        height: 30px;
+    }
+    span.d3 {
+        font-size: 16px;
+    }
+    #p1 { font-size: 14px; }
+    #p2 { font-size: 22px; }
+    #last #p3 { font-size: 18px; }
+    #p4, #cvv { font-size: 14px; }
+    .chip { width: 50px; }
+}
+
+/* 📲 Tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+    .container {
+        max-width: 380px;
+    }
+    #p2 { font-size: 26px; }
+    #last #p3 { font-size: 20px; }
+    .chip { width: 60px; }
+}
+
+/* 💻 Laptops */
+@media (min-width: 769px) and (max-width: 1200px) {
+    .container {
+        max-width: 420px;
+    }
+    #p2 { font-size: 28px; }
+    #last #p3 { font-size: 21px; }
+}
+
+/* 🖥️ Large desktops */
+@media (min-width: 1201px) {
+    .container {
+        max-width: 460px;
+    }
+    #p2 { font-size: 30px; }
+    #last #p3 { font-size: 22px; }
+}

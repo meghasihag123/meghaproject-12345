@@ -1,0 +1,77 @@
+table {
+  border: 2px solid;
+  border-collapse: collapse;
+  width: 100%;              /* full width for responsiveness */
+  max-width: 1000px;        /* limit width on large screens */
+  margin: 0 auto;           /* center the table */
+}
+
+td {
+  border: 2px solid;
+  padding: 10px;
+  text-align: center;
+  word-wrap: break-word;    /* wrap long text */
+}
+
+/* Images inside table */
+td img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Small Phones (max-width: 375px) */
+@media (max-width: 375px) {
+  table {
+    font-size: 12px;
+  }
+  td {
+    padding: 5px;
+  }
+  td img {
+    width: 50px;
+    height: auto;
+  }
+}
+
+/* Medium Phones (max-width: 425px) */
+@media (max-width: 425px) {
+  table {
+    font-size: 13px;
+  }
+  td {
+    padding: 6px;
+  }
+  td img {
+    width: 60px;
+    height: auto;
+  }
+}
+
+/* Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+  table {
+    font-size: 14px;
+  }
+  td {
+    padding: 8px;
+  }
+  td img {
+    width: 70px;
+    height: auto;
+  }
+}
+
+/* Desktops (min-width: 1024px) */
+@media (min-width: 1024px) {
+  table {
+    font-size: 16px;
+  }
+  td {
+    padding: 10px;
+  }
+  td img {
+    width: 80px;
+    height: auto;
+  }
+}

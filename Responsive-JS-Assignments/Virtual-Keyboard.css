@@ -1,0 +1,106 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 30px;
+  background: linear-gradient(135deg, #f4f4f4, #e0f7fa);
+}
+
+h1 {
+  color: #2c3e50;
+}
+
+textarea {
+  width: 80%;
+  max-width: 600px;
+  height: 120px;
+  margin: 20px auto;
+  font-size: 18px;
+  padding: 10px;
+  border: 2px solid #3498db;
+  border-radius: 6px;
+  display: block;
+  background: #ffffff;
+  color: #333;
+  box-sizing: border-box;
+}
+
+.keyboard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.key {
+  margin: 5px;
+  padding: 12px 18px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background: #3498db;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.1s;
+  flex: 1 0 60px;   /* flexible keys */
+  max-width: 80px; /* cap size */
+}
+
+.key:hover {
+  background: #2980b9;
+}
+
+.key:active {
+  transform: scale(0.95);
+  background: #1f618d;
+}
+
+/* Special keys */
+.key.special {
+  background: #e67e22;
+  color: white;
+}
+
+.key.special:hover {
+  background: #d35400;
+}
+
+/* Highlight CapsLock when ON */
+.key.caps-on {
+  background: #4caf50;
+  color: white;
+}
+
+/* 📱 Small phones */
+@media (max-width: 480px) {
+  textarea {
+    width: 95%;
+    font-size: 16px;
+    height: 100px;
+  }
+  .keyboard {
+    max-width: 95%;
+  }
+  .key {
+    flex: 1 0 22%;   /* 4 keys per row */
+    max-width: none;
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+/* 📲 Tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+  textarea {
+    width: 90%;
+    font-size: 17px;
+  }
+  .keyboard {
+    max-width: 500px;
+  }
+  .key {
+    flex: 1 0 18%;   /* 5 keys per row */
+    font-size: 15px;
+  }
+}
+

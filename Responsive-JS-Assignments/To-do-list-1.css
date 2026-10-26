@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ece9e6, #ffffff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Floating card container */
+.container {
+    background-color: antiquewhite;
+    width: 400px;
+    min-height: 400px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-align: center;
+}
+
+/* Hover lift effect */
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+/* Input + Add button */
+#search-box {
+    width: 70%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    margin-right: 5px;
+}
+
+.container button {
+    padding: 8px 12px;
+    border: none;
+    background: #6c63ff;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+.container button:hover {
+    background: #574fd6;
+}
+
+/* Task list */
+#taskList {
+    margin-top: 20px;
+}
+#taskList div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f9f9f9;
+    padding: 8px 10px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+#taskList span {
+    color: #444;
+}
+
+/* Delete button inside tasks */
+#taskList button {
+    background: #ff4d4d;
+    padding: 5px 10px;
+    border-radius: 6px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+#taskList button:hover {
+    background: #d93636;
+}
+
+/* 📱 Small phones */
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+        min-height: auto;
+        padding: 15px;
+    }
+    #search-box {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .container button {
+        width: 100%;
+        margin-top: 5px;
+    }
+}
+
+/* 📲 Tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+    #search-box {
+        width: 65%;
+    }
+    .container button {
+        width: 30%;
+    }
+}

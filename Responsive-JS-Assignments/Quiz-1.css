@@ -1,0 +1,138 @@
+ /*General page styling*/
+ body {
+     font-family: Arial, sans-serif;
+     margin: 0;
+     background: linear-gradient(135deg, #f0f4f8, #d9e4ec);
+     padding: 20px;
+     color: #333;
+ }
+
+ /* Title */
+ h2 {
+     text-align: center;
+     color: #2c3e50;
+     margin-bottom: 20px;
+     font-size: 1.8rem;
+ }
+
+ /* Question container*/
+ .question {
+     background: #fff;
+     border-radius: 8px;
+     padding: 15px;
+     margin-bottom: 15px;
+     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+     transition: transform 0.2s ease;
+ }
+
+ .question:hover {
+     transform: scale(1.02);
+ }
+
+ /* Question text*/
+ .question p {
+     font-weight: bold;
+     margin-bottom: 10px;
+ }
+
+ .question div {
+     margin: 5px 0;
+ }
+
+ input[type="radio"] {
+     margin-right: 8px;
+     accent-color: #3498db;
+     /* modern browsers */
+ }
+
+ /* Submit button */
+ #submit {
+     display: block;
+     margin: 20px auto;
+     padding: 12px 25px;
+     font-size: 16px;
+     font-weight: bold;
+     background: #3498db;
+     color: #fff;
+     border: none;
+     border-radius: 6px;
+     cursor: pointer;
+     transition: background 0.3s ease;
+ }
+
+ #submit:hover {
+     background: #2980b9;
+ }
+
+ /* Result box */
+ #result {
+     text-align: center;
+     font-size: 18px;
+     font-weight: bold;
+     margin-top: 20px;
+     padding: 10px;
+     border-radius: 6px;
+     background: #ecf0f1;
+     color: #2c3e50;
+ }
+ /* 📱 Mobile */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    h2 {
+        font-size: 1.4rem;
+    }
+    .question {
+        padding: 10px;
+    }
+    #submit {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px;
+    }
+    #result {
+        font-size: 16px;
+    }
+}
+
+/* 📲 Tablet */
+@media (min-width: 481px) and (max-width: 768px) {
+    h2 {
+        font-size: 1.6rem;
+    }
+    .question {
+        padding: 12px;
+    }
+    #submit {
+        font-size: 15px;
+    }
+}
+
+/* 💻 Laptop */
+@media (min-width: 769px) and (max-width: 1200px) {
+    h2 {
+        font-size: 2rem;
+    }
+    .question {
+        max-width: 700px;
+        margin: 15px auto;
+    }
+    #submit {
+        font-size: 16px;
+    }
+}
+
+/* 🖥️ Large Desktop */
+@media (min-width: 1201px) {
+    .question {
+        max-width: 800px;
+        margin: 20px auto;
+    }
+    h2 {
+        font-size: 2.2rem;
+    }
+    #submit {
+        font-size: 18px;
+    }
+}

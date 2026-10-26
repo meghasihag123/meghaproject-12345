@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="Image-Slider.css">
+    <script defer src="Image-Slider.js"></script>
+</head>
+<body>
+    <div class="slide-container">
+
+        <div class="slide">
+            <img src="image/Image-1.avif" alt="Image Flower">
+            <div class="caption">Caption Text 1</div>
+        </div>
+
+        <div class="slide">
+            <img src="image/Image-3.avif" alt="Image Flower">
+            <div class="caption">Caption Text 2</div>
+        </div>
+
+        <div class="slide">
+            <img src="image/windows.jpg" alt="Image Flower">
+            <div class="caption">Caption Text 3</div>
+        </div>
+
+        <div class="slide">
+            <img src="image/mac.jpg" alt="Image Flower">
+            <div class="caption">Caption Text 4</div>
+        </div>
+
+        <span class="arrow prev" onclick="controller(-1)">&#10094</span>
+        <span class="arrow next" onclick="controller(+1)">&#10095</span>
+    </div>
+</body>
+
+</html>

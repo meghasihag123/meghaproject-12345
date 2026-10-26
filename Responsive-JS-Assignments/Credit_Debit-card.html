@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credi/Debit card demo UI</title>
+    <link rel="stylesheet" href="Credit_Debit-card.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo">
+            <span class="d1"></span>
+            <span class="d2"></span>
+            <span class="d3">Master Card</span>
+        </div>
+
+        <div>
+            <p id="p1">Card Number</p>
+            <p id="p2"></p> <!-- JS will insert number -->
+        </div>
+
+        <div id="last">
+            <p id="p3">Prem Kumar Shani</p>
+            <div class="security">
+                <p id="p4">Valid Thru
+                    <span id="expiry"></span> <!-- JS will insert expiry -->
+                </p>
+                <p id="cvv">•••</p> <!-- JS will insert cvv (HIDDEN) -->
+            </div>
+        </div>
+
+        <!-- Chip image outside logo -->
+        <img src="credit-card-image-removebg-preview.png" alt="Card Chip" class="chip">
+    </div>
+
+    <!-- Attach JS file -->
+    <script src="Credit_Debit-card.js"></script>
+
+</html>

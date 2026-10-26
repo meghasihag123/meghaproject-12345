@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+    /* light background for contrast */
+}
+
+.form-container {
+    background-color: #ef5670;
+    /* vibrant pink-red */
+    width: 100%;
+    max-width: 300px;
+    padding: 30px;
+    margin: 40px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+label {
+    color: #fff;
+    font-size: 18px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="password"] {
+    padding: 10px;
+    width: 100%;
+    font-style: oblique;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-style: oblique;
+    background-color: #b8ea55;
+    color: #000;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+input:focus {
+    background-color: #95e9e3;
+    border: 2px solid #e9dae0;
+    outline: none;
+}
+
+#n5:hover {
+    background-color: #1a1919c7;
+    color: #fff;
+}
+
+/* MObile S*/
+@media(max-width:374px) {
+    .form-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    label {
+        font-size: 16px;
+        color: #000;
+    }
+}
+
+/* MObile M*/
+@media (min-width:375px)and (max-width:424px) {
+    .form-container {
+        width: 85%;
+    }
+
+    label {
+        font-size: 14px;
+    }
+}
+
+/* MObile L*/
+@media (min-width:425px) and (max-width:767px) {
+    .form-container {
+        max-width: 350px;
+    }
+
+    label {
+        font-size: 16px;
+    }
+}
+
+/* Tablet */
+@media (min-width:768px) and (max-width:1023px) {
+    .form-container {
+        max-width: 600px;
+    }
+
+    label {
+        font-size: 20px;
+    }
+
+    input[type="submit"] {
+        font-size: 18px;
+    }
+}
+
+/*Laptop*/
+@media (min-width:1024px) and (max-width:1440px) {
+    .form-container {
+        max-width: 700px;
+    }
+
+    label {
+        font-size: 22px;
+    }
+}
+
+/*Large-Laptop*/
+@media (min-width:1440px) {
+    .form-container {
+        max-width: 800px;
+        margin: 100px auto;
+    }
+
+    label {
+        font-size: 24px;
+    }
+}

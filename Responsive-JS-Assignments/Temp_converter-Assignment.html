@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Convertor</title>
+    <style>
+    body {
+    padding: 20px;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Title */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Main container */
+#container {
+    text-align: center;
+    background-color: aquamarine;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: auto;
+}
+
+/* Input sections */
+.input-div {
+    display: inline-block;
+    margin: 15px;
+    width: 45%;                 /* flexible width */
+    box-sizing: border-box;
+}
+
+/* Input fields */
+.c {
+    padding: 8px;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    text-align: center;
+    width: 100%;                /* full width inside container */
+    border-radius: 5px;
+    border: 1px solid #333;
+}
+
+/* Labels */
+label {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* 📱 Small phones */
+@media (max-width: 480px) {
+    #container {
+        padding: 20px;
+    }
+    .input-div {
+        display: block;          /* stack vertically */
+        width: 100%;
+        margin: 10px 0;
+    }
+    .c {
+        font-size: 1rem;
+    }
+    label {
+        font-size: 0.9rem;
+    }
+}
+
+/* 📲 Tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+    .input-div {
+        width: 48%;              /* side by side but flexible */
+    }
+    .c {
+        font-size: 1.1rem;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+    <h1>Temperature Convertor</h1>
+    <div id="container">
+        <div class="input-div">
+            <label>Celsius</label><br>
+            <input type="number" value="0" class="c" id="cel">
+        </div>
+        <div class="input-div">
+            <label>Fahrenheit</label><br>
+            <input type="number" value="32" class="c" id="fah">
+        </div>
+    </div>
+    
+    <script>
+        var cel = document.getElementById("cel");
+        var fah = document.getElementById("fah");
+
+        cel.addEventListener('input', function () {
+            // Check whether event is working or not
+            //console.log('cel changed');
+            let c = this.value; // GET VALUE IN A VARIABLE (store value of celcius in c)
+            // Celsius to fahrenheit convert
+            let f = (c * 9 / 5) + 32;
+            // To Get output as desired decimal values
+            if (!Number.isInteger(f)) {
+                f = f.toFixed(4);
+            }
+            // change value of fah
+            fah.value = f;
+        });
+        fah.addEventListener("input", function () {
+            //console.log('fah changed');
+            let f = this.value;
+            // fahrenheit to celsius
+            let c = (f - 32) * 5 / 9;
+            if (!Number.isInteger(c)) {
+                c = c.toFixed(4);
+
+            }
+            cel.value = c;
+        })
+
+    </script>
+
+</body>
+
+</html>
